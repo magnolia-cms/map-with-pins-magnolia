@@ -1,0 +1,4 @@
+title: Map with pins
+renderType: freemarker
+templateScript: /map-with-pins/templates/components/map.ftl
+dialog: map-with-pins:components/map

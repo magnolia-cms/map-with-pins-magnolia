@@ -1,0 +1,54 @@
+form:
+  label: Map with pins
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: map
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Map / background
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+    - name: pins
+      label: Pins
+      fields:
+
+        - name: pins
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Pin
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+
+              - name: address
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Address
+
+              - name: top
+                class: info.magnolia.ui.form.field.definition.HiddenFieldDefinition
+                defaultValue: 50
+                type: String
+
+              - name: left
+                class: info.magnolia.ui.form.field.definition.HiddenFieldDefinition
+                defaultValue: 50
+                type: String
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
