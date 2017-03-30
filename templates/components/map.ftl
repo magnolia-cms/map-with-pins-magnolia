@@ -1,7 +1,7 @@
-${resfn.css(["/map-with-pins/.*styles.css"])}
+${resfn.css(["/map-with-pins-magnolia/.*styles.css"])}
 
-${resfn.js(["/map-with-pins/webresources/js/jquery-1.12.4.js",
-            "/map-with-pins/webresources/js/jquery-ui.js"])}
+${resfn.js(["/map-with-pins-magnolia/webresources/js/jquery-1.12.4.js",
+            "/map-with-pins-magnolia/webresources/js/jquery-ui.js"])}
 
 <div class="pin-on-map">
 
