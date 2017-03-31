@@ -1,0 +1,22 @@
+{
+  "name": "map-with-pins-magnolia",
+  "version": "1.0.0",
+  "description": "Map with Pins - A component to create a simple custom map with pins/markers.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magnolia-cms/map-with-pins-magnolia.git"
+  },
+  "keywords": [
+    "magnolia-light-module",
+    "magnolia-component"
+  ],
+  "contributors": [
+    "Magnolia (https://magnolia-cms.com/)",
+    "Tomáš Gregovský, tomas.gregovsky@magnolia.com"
+    ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magnolia-cms/map-with-pins-magnolia/issues"
+  },
+  "homepage": "https://github.com/magnolia-cms/map-with-pins-magnolia#readme"
+}

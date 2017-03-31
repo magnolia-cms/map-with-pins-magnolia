@@ -19,6 +19,11 @@ Each pin then can be moved to his exact position. This is drag&drop feature is a
 Copy/drop `map-with-pins-mangolia` folder into Magnolia's `light-modules` folder. Or any folder you have configured in `magnolia.properties` file in `magnolia.resources.dir=` parameter.
 
 
+## Requirments
+
+Drag&drop functionality is sending data about new position over default Magnolia REST API to website workspace. This API is enabled by default on author instance, but its always good to double check and you can do it in `security app > roles > rest role > web access` and have `Get & Post` for `/.rest/nodes/v1/website*` (this is need only on author instance).
+
+
 ## Usage
 
 This component contains decoration for `mtk:pages/basic` so when its installed it already available on 'Basic' page.
@@ -31,8 +36,12 @@ To make it available on other pages, just use similar 'decoration' or manually a
 
 ## Advanced usage
 
-This component allow you to choose any image as background and then unlimited number of pins / markers / pointers, so it can be used not only for map, but for anything where you need point things in X and Y axis. E.g graphs with points, etc. Pin image is in webresources folder so you can easily replace with any image your use case requires.
+This component allow you to choose any image as a background and then unlimited number of pins / markers / pointers, so it can be used not only for map, but for anything where you need point things in X and Y axis. E.g graphs with points, etc. Pin image exists in `webresources/img/pin-white.svg` so you can easily replace with any image for your use case.
 
+
+## Tips
+
+This component is using Jquery and Jquery-ui libraries. By default they are loaded in component ftl, but we suggest to move them to hrml > head of your page for better functionality or to avoid a collision with other Jquery libraries in your project.
 
 
 ## License
